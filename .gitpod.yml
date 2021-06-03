@@ -1,0 +1,12 @@
+image:
+  file: .gitpod.Dockerfile
+
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - init: mix do deps.get, deps.compile # runs during prebuild
+  - init: cd assets && npm install && node node_modules/webpack/bin/webpack.js --mode development
+
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+ports:
+  - port: 4000
+    onOpen: open-preview
