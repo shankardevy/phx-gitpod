@@ -1,1 +1,1 @@
-FROM gitpod/workspace-postgres
+FROM alpine:3.13.5
